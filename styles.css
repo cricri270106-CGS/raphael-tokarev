@@ -122,6 +122,17 @@ h2.display.small { font-size: clamp(2rem, 3.6vw, 3rem); }
 .quote p { font-family: var(--display); font-size: clamp(1.6rem, 2.6vw, 2.2rem); line-height: 1.15; }
 .quote footer { margin-top: 12px; font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--on-panel-muted); }
 
+/* Reels */
+.inline-link { color: var(--ink); border-bottom: 1px solid var(--accent); }
+.reels { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 18px; align-items: start; }
+.reel { min-width: 0; }
+.reel .instagram-media { margin: 0 !important; min-width: 0 !important; width: 100% !important; max-width: 100% !important; border-radius: 18px !important; overflow: hidden; }
+blockquote.instagram-media { background: var(--surface); border: 1px solid var(--line); padding: 0; }
+.reel iframe { border-radius: 18px !important; }
+.reel-fallback { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; aspect-ratio: 9 / 14; color: var(--ink-2); font-weight: 600; font-size: .9rem; background: radial-gradient(120% 90% at 30% 10%, #2b3a48, var(--surface) 65%); }
+.reel-play { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg); color: var(--accent); font-size: 22px; }
+.reel-play svg { fill: currentColor; stroke: none; }
+
 /* FAQ */
 .acc { display: grid; gap: 10px; }
 .acc details { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
