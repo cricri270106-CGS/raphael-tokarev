@@ -123,13 +123,14 @@ h2.display.small { font-size: clamp(2rem, 3.6vw, 3rem); }
 .quote footer { margin-top: 12px; font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--on-panel-muted); }
 
 /* Bildwelt */
-.moods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.mood { position: relative; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); aspect-ratio: 3 / 4; box-shadow: var(--shadow); }
+.moods { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.mood { position: relative; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); aspect-ratio: 3 / 4.6; box-shadow: var(--shadow); }
 .art { position: absolute; inset: 0; width: 100%; height: 100%; transition: transform 1.4s var(--ease); }
 .mood:hover .art { transform: scale(1.04); }
 .mood-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 22px 22px; background: linear-gradient(to top, rgba(8,10,12,.85), transparent); color: #f1efea; }
 .mood-cap h3 { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1.1; }
 .mood-cap p { font-size: .9rem; color: #cfd6dc; }
+@media (max-width: 1000px) { .moods { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 760px) { .moods { grid-template-columns: 1fr; } .mood { aspect-ratio: 4 / 3; } }
 
 /* FAQ */
