@@ -30,22 +30,5 @@
     items.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // Instagram embeds: load Instagram's script only when the reels come into view
-  var reels = $('[data-reels]');
-  if (reels) {
-    var loadIg = function () {
-      if (window.instgrm) { window.instgrm.Embeds.process(); return; }
-      var sc = document.createElement('script');
-      sc.async = true; sc.src = 'https://www.instagram.com/embed.js';
-      document.body.appendChild(sc);
-    };
-    if ('IntersectionObserver' in window) {
-      var rio = new IntersectionObserver(function (en) {
-        if (en[0].isIntersecting) { loadIg(); rio.disconnect(); }
-      }, { rootMargin: '400px 0px' });
-      rio.observe(reels);
-    } else loadIg();
-  }
-
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
